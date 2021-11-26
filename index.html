@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Server</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <ul class="navbar">
+        <li><a href="index.html" class="active">Начало</a></li>
+        <li><a href="explanation.html">Как работи</a></li>
+        <li><a href="examples.html">Примери</a></li>
+        <li><a href="route53.html">Route53</a></li>
+        <li><a href="author.html" class="last">About author</a></li>
+    </ul>
+    <!-- MAIN CONTENT ON LANDING PAGE -->
+    <div class="background-1">
+        <div class="container">
+            <div class="dns-image">
+                <img src="images/dns_logo.png" alt="DNS Image">
+            </div>
+            <div class="basic-info">
+                <h1 class="section-heading" style="margin-top:28px; text-align: left">Какво е DNS?</h1>
+                <p>Domain Name System (DNS) е йерархична децентрализирана система за именуване, използвана за
+                    идентифициране на компютъри, услуги и други ресурси, достъпни през интернет или други мрежи с
+                    интернет протокол.</p>
+                <p>Системата за имена на домейни (DNS) е отговорна за преобразувенето на имената на домейни в конкретен
+                    IP адрес, удобен за човеко.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Section - Как работи DNS -->
+    <div class="background-2">
+        <div class="container">
+            <div class="basic-info">
+                <h1 class="section-heading">Как работи DNS?</h1>
+                <p>Системата за имена на домейни е основен компонент от функционалността на Интернет от <strong>1985
+                        г.</strong> Процесът на разрешаване на DNS включва преобразуване на име на хост (<em>като
+                        www.example.com</em>) в
+                    удобен за компютър IP адрес (като <em>192.168.1.1</em>). На всяко устройство в Интернет се дава IP
+                    адрес и
+                    този адрес е необходим, за да се намери подходящото интернет устройство - както се използва адрес на
+                    улицата за намиране на конкретен дом. Когато потребител иска да зареди уеб страница, трябва да се
+                    извърши превод между това, което потребителят въвежда в своя уеб браузър (example.com) и удобния за
+                    машина адрес, необходим за намиране на уеб страницата example.com.</p>
+                <button onclick="location.href='explanation.html'" class="read-more">Прочети повече</button>
+            </div>
+        </div>
+        <!-- Section - Как работи DNS - steps -->
+        <div class="background-1">
+            <h1 style="padding: 18px 0; text-align: center;">Съпки към работата на DNS сървър</h1>
+            <hr style="border: 1px solid #66FCF1; opacity: 0.2">
+            <div class="container-wide-wrapper">
+                <div class="container-wide">
+                    <table>
+                        <tr>
+                            <td class="numbering">1</td>
+                        </tr>
+                        <tr>
+                            <th>example.com<br>↓<br>web browser</th>
+                        </tr>
+                        <tr></tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="numbering">2</td>
+                        </tr>
+                        <tr>
+                            <th>Recursive resolver</th>
+                        </tr>
+                        <tr>
+                            <td><button>?</button></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="numbering">3</td>
+                        </tr>
+                        <tr>
+                            <th>Root nameserver</th>
+                        </tr>
+                        <tr>
+                            <td><button>?</button></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="numbering">4</td>
+                        </tr>
+                        <tr>
+                            <th>Recursive resolver<br>↓<br>TLD nameserver</th>
+                        </tr>
+                        <tr>
+                            <td><button>?</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="container-wide">
+                    <table>
+                        <tr>
+                            <td class="numbering">5</td>
+                        </tr>
+                        <tr>
+                            <th>Recursive resolver<br>↑<br>TLD nameserver</th>
+                        </tr>
+                        <tr>
+                            <td><button>?</button></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="numbering">6</td>
+                        </tr>
+                        <tr>
+                            <th>Recursive resolver<br>↓<br>authoritative nameserver</th>
+                        </tr>
+                        <tr>
+                            <td><button>?</button></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="numbering">7</td>
+                        </tr>
+                        <tr>
+                            <th>Recursive resolver<br>↑<br>authoritative nameserver</th>
+                        </tr>
+                        <tr>
+                            <td><button>?</button></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="numbering">8</td>
+                        </tr>
+                        <tr>
+                            <th>Recursive resolver<br>↓<br>web browser</th>
+                        </tr>
+                        <tr>
+                            <td><button>?</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Section - Създаване на DNS -->
+        <div class="background-3">
+            <div class="container">
+                <div class="basic-info">
+                    <h1 class="section-heading">Създаване на DNS сървър</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="read-more">Прочети повече</button>
+                </div>
+            </div>
+        </div>
+        <!-- Section - AWS Route53 -->
+        <div class="background-1">
+            <div class="container">
+                <div class="basic-info">
+                    <h1 class="section-heading">AWS Route53</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="read-more">Прочети повече</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyrights </p>
+        </footer>
+</body>
+
+</html>
