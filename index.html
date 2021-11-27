@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNS Server</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,19 +44,17 @@
     <!-- Section - Как работи DNS -->
     <div class="background-2">
         <div class="container">
-            <div class="basic-info">
-                <h1 class="section-heading">Как работи DNS?</h1>
-                <p>Системата за имена на домейни е основен компонент от функционалността на Интернет от <strong>1985
-                        г.</strong> Процесът на разрешаване на DNS включва преобразуване на име на хост (<em>като
-                        www.example.com</em>) в
-                    удобен за компютър IP адрес (като <em>192.168.1.1</em>). На всяко устройство в Интернет се дава IP
-                    адрес и
-                    този адрес е необходим, за да се намери подходящото интернет устройство - както се използва адрес на
-                    улицата за намиране на конкретен дом. Когато потребител иска да зареди уеб страница, трябва да се
-                    извърши превод между това, което потребителят въвежда в своя уеб браузър (example.com) и удобния за
-                    машина адрес, необходим за намиране на уеб страницата example.com.</p>
-                <button onclick="location.href='explanation.html'" class="read-more">Прочети повече</button>
-            </div>
+            <h1 class="section-heading">Как работи DNS?</h1>
+            <p>Системата за имена на домейни е основен компонент от функционалността на Интернет от <strong>1985
+                    г.</strong> Процесът на разрешаване на DNS включва преобразуване на име на хост (<em>като
+                    www.example.com</em>) в
+                удобен за компютър IP адрес (като <em>192.168.1.1</em>). На всяко устройство в Интернет се дава IP
+                адрес и
+                този адрес е необходим, за да се намери подходящото интернет устройство - както се използва адрес на
+                улицата за намиране на конкретен дом. Когато потребител иска да зареди уеб страница, трябва да се
+                извърши превод между това, което потребителят въвежда в своя уеб браузър (example.com) и удобния за
+                машина адрес, необходим за намиране на уеб страницата example.com.</p>
+            <button onclick="location.href='explanation.html'" class="read-more">Разбери повече</button>
         </div>
         <!-- Section - Как работи DNS - steps -->
         <div class="background-1">
@@ -115,7 +114,21 @@
                             <th>Recursive resolver<br>↑<br>TLD nameserver</th>
                         </tr>
                         <tr>
-                            <td><button>?</button></td>
+                            <td>
+                                <div class="popup" id="popup-1">
+                                    <div class="overlay"></div>
+                                    <div class="content">
+                                        <div class="close-btn" onclick="togglePopup()">&times;</div>
+                                        <h1>Title</h1>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit incidunt
+                                            porro,
+                                            magnam tempore animi dignissimos accusantium corrupti harum adipisci,
+                                            laudantium
+                                            mollitia cumque molestias voluptate officiis ad cum quidem fugiat rem.</p>
+                                    </div>
+                                </div>
+                                <button onclick="togglePopup()">?</button>
+                            </td>
                         </tr>
                     </table>
                     <table>
@@ -157,38 +170,36 @@
         <!-- Section - Създаване на DNS -->
         <div class="background-3">
             <div class="container">
-                <div class="basic-info">
-                    <h1 class="section-heading">Създаване на DNS сървър</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button class="read-more">Прочети повече</button>
-                </div>
+                <h1 class="section-heading">Създаване на DNS сървър</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="read-more">Разбери повече</button>
             </div>
         </div>
         <!-- Section - AWS Route53 -->
         <div class="background-1">
             <div class="container">
-                <div class="basic-info">
-                    <h1 class="section-heading">AWS Route53</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button class="read-more">Прочети повече</button>
-                </div>
+                <h1 class="section-heading">AWS Route53</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="read-more">Разбери повече</button>
             </div>
         </div>
         <footer>
             <p>Copyrights </p>
         </footer>
+
+        <script src="scripts/script.js"></script>
 </body>
 
 </html>

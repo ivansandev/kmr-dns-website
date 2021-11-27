@@ -11,29 +11,33 @@
 
 <body>
     <ul class="navbar">
-        <li><a href="index.html" class="active">Начало</a></li>
-        <li><a href="explanation.html">Как работи</a></li>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="explanation.html" class="active">Как работи</a></li>
         <li><a href="examples.html">Примери</a></li>
         <li><a href="route53.html">Route53</a></li>
         <li><a href="author.html" class="last">About author</a></li>
     </ul>
+
     <!-- MAIN CONTENT ON LANDING PAGE -->
     <div class="background-1">
         <div class="container">
-            <div class="dns-image">
-                <img src="images/dns_logo.png" alt="DNS Image">
-            </div>
-            <div class="basic-info">
-                <h1 style="margin-top:28px;">Как работи DNS?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+            <h1 class="section-heading">Как работи DNS?</h1>
+            <p>Мислете за DNS като за списъка с контакти на вашия смартфон, който съпоставя имената на хората с
+                техните телефонни номера и имейл адреси. След това умножете този списък с контакти по всички
+                останали на планетата.</p>
         </div>
     </div>
-    <!-- Section - Как работи DNS -->
+    <!-- Authoritative vs Recursive DNS -->
+    <div class="background-3">
+        <div class="container">
+            <h1 class="section-heading">test</h1>
+            <p><strong>Авторитетен DNS</strong>: Авторитетна DNS услуга предоставя механизъм за актуализиране, който разработчиците
+                използват, за да управляват своите публични DNS имена. След това отговаря на DNS запитвания, като
+                превежда имената на домейни в IP адрес, така че компютрите да могат да комуникират помежду си.
+                Авторитетният DNS има окончателната власт над домейн и отговаря за предоставянето на отговори на
+                рекурсивните DNS сървъри с информацията за IP адреса. Amazon Route 53 е авторитетна DNS система.</p>
+        </div>
+    </div>
     <footer>
         <p>Copyrights </p>
     </footer>
