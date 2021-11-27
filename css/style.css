@@ -19,18 +19,35 @@ body {
     background-color: #000;
 }
 
+footer {
+    padding: 20px 0;
+    display:flex;
+    justify-content: center;
+}
+
+footer p {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    width: 65vw;
+    border-top: 1px solid  #D0D2D3;
+    border-bottom: 1px solid  #D0D2D3;
+    padding: 12px 0;
+
+}
+
 .background-1 {
     background-color: #1F2833;
-    color: white;
+    color: #fff;
 }
 
 .background-2 {
     background-color: #66FCF1;
-    color: black;
+    color: #000;
 }
 
 .background-3 {
-    background-color: #d0d2d3;
+    background-color: #D0D2D3;
 }
 
 
@@ -49,7 +66,7 @@ body {
 
 .navbar li a {
     display: block;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -57,30 +74,42 @@ body {
 
 .navbar li a:hover {
     background-color: #66FCF1;
-    color: black;
+    color: #000;
 }
 
 .navbar li .active {
     background-color: #1F2833;
 }
 
-.navbar .last {
+.navbar #last {
     background-color: #66FCF1;
-    color: black;
+    color: #000;
     position: absolute;
     right: 0;
     width: 160px;
 }
 
-.navbar .last:hover {
-    color: black;
-    background-color: white;
+/* .navbar #last:hover {
+    color: #000;
+    background-color: #fff;
+} */
+
+.navbar #author-quick-info {
+    position: absolute;
+    margin: 0;
+    top: 47px;
+    right: 0px;
+    width: 144px;
+    padding: 20px 28px;
+    background-color: #D0D2D3;
+    line-height: 1.8em;
+    opacity: 0;
 }
 
 
 /* MAIN CONTENT */
 .container {
-    width: 65%;
+    width: 60vw;
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
@@ -99,7 +128,6 @@ body {
 }
 
 .container h1 {
-    width: 100vw;
     margin: 0 0 16px;
     font-size: 2.3em;
     text-align: center;
@@ -138,7 +166,7 @@ body {
     border-radius: 4px;
     font-size: 1.1rem;
     background-color: #1F2833;
-    color: white;
+    color: #fff;
     font-weight: 600;
     cursor: pointer;
     margin: 20px auto 0;
@@ -150,12 +178,12 @@ body {
 
 .background-1 .container .read-more {
     background-color: #66FCF1;
-    color: black;
+    color: #000;
 }
 
 .background-1 .container .read-more:hover {
     background-color: #3ddfd4;
-    color: black;
+    color: #000;
 }
 
 /* FULL WIDTH SECTION (with mini containers) */
@@ -198,7 +226,7 @@ body {
     font-size: 1.3rem;
     /* background-color: #1F2833; */
     background-color: #073649;
-    color: white;
+    color: #fff;
     float: right;
 }
 
