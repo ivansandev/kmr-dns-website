@@ -6,37 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNS Server</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <ul class="navbar">
-        <li><a href="index.html" class="active">Начало</a></li>
+        <li><a href="index.html">Начало</a></li>
         <li><a href="explanation.html">Как работи</a></li>
         <li><a href="examples.html">Примери</a></li>
-        <li><a href="route53.html">Route53</a></li>
-        <li><a href="author.html" class="last">About author</a></li>
+        <li><a href="route53.html" class="active">Route53</a></li>
+        <li id="last-wrapper">
+            <a href="author.html" id="last">About author</a>
+            <div id="author-quick-info">
+                <p><strong>Име:</strong> Иван Сандев</p>
+                <p><strong>Група:</strong> 51</p>
+                <p><strong>Фак №:</strong> 123218009</p>
+            </div>
+        </li>
     </ul>
-    <!-- MAIN CONTENT ON LANDING PAGE -->
+
     <div class="background-1">
         <div class="container">
-            <div class="dns-image">
-                <img src="images/dns_logo.png" alt="DNS Image">
-            </div>
-            <div class="basic-info">
-                <h1 style="margin-top:28px;">Как работи DNS?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+            <h1 class="section-heading">Route53</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi officiis a facilis doloribus architecto
+                iusto dicta quia voluptas, saepe mollitia accusantium vitae nesciunt enim harum adipisci aliquid
+                perspiciatis. Voluptatibus, minus.</p>
         </div>
     </div>
+
+    <div class="background-3">
+        <div class="container">
+            <h1 class="section-heading">test</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum laudantium odit ullam, quidem sunt
+                tenetur suscipit magnam esse at quaerat deserunt vero? Quidem tempore dicta quaerat nam! Commodi,
+                tenetur voluptatum.</p>
+        </div>
+    </div>
+
     <!-- Section - Как работи DNS -->
-    <footer>
-        <p>Copyrights </p>
+    <footer class="background-1">
+        <p><em>© 2021 Ivan Sandev</em></p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 
 </h работиt
