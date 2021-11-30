@@ -67,7 +67,8 @@
         </div>
         <!-- Section - Как работи DNS - steps -->
         <div class="background-1">
-            <h1 style="padding: 24px 0; text-align: center; font-family: 'Oswald', sans-serif;">Съпки към работа на DNS сървър</h1>
+            <h1 style="padding: 24px 0; text-align: center; font-family: 'Oswald', sans-serif;">Съпки към работа на DNS
+                сървър</h1>
             <hr style="border: 1px solid #66FCF1; opacity: 0.2">
             <div class="container-wide-wrapper">
 
@@ -100,7 +101,9 @@
                             <th>Recursive resolver</th>
                         </tr>
                         <tr>
-                            <td><button onclick="togglePopup('Recursive resolver', 'This is a type of DNS server between a client and authoritative name servers. (An internet service provider (ISP) usually provides a recursive resolver. However, some may opt to use a public DNS resolver.) After receiving a query, a recursive resolver will either respond with cached information or send a request on to a…')">?</button></td>
+                            <td><button
+                                    onclick="togglePopup('Recursive resolver', 'This is a type of DNS server between a client and authoritative name servers. (An internet service provider (ISP) usually provides a recursive resolver. However, some may opt to use a public DNS resolver.) After receiving a query, a recursive resolver will either respond with cached information or send a request on to a…')">?</button>
+                            </td>
                         </tr>
                     </table>
                     <table>
@@ -111,7 +114,9 @@
                             <th>Root nameserver</th>
                         </tr>
                         <tr>
-                            <td><button onclick="togglePopup('Root nameserver', 'This is the first step in translating domain names to IP addresses. Its main job is to point to other more specific server locations. It responds to the resolver with the name of a TLD nameserver, which stores the information for its domains.')">?</button></td>
+                            <td><button
+                                    onclick="togglePopup('Root nameserver', 'This is the first step in translating domain names to IP addresses. Its main job is to point to other more specific server locations. It responds to the resolver with the name of a TLD nameserver, which stores the information for its domains.')">?</button>
+                            </td>
                         </tr>
                     </table>
                     <table>
@@ -122,7 +127,9 @@
                             <th>Recursive resolver<br>↓<br>TLD nameserver</th>
                         </tr>
                         <tr>
-                            <td><button onclick="togglePopup('Recursive resolver', 'The recursive resolver sends a request to the TLD nameserver.')">?</button></td>
+                            <td><button
+                                    onclick="togglePopup('Recursive resolver', 'The recursive resolver sends a request to the TLD nameserver.')">?</button>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -134,7 +141,9 @@
                         <tr>
                             <th>Recursive resolver<br>↑<br>TLD nameserver</th>
                         </tr>
-                        <td><button onclick="togglePopup('Recursive resolver <-> TLD nameserver', 'The TLD nameserver responds with the names and possible IP addresses of the requested domain’s authoritative nameservers.')">?</button></td>
+                        <td><button
+                                onclick="togglePopup('Recursive resolver <-> TLD nameserver', 'The TLD nameserver responds with the names and possible IP addresses of the requested domain’s authoritative nameservers.')">?</button>
+                        </td>
                     </table>
                     <table>
                         <tr>
@@ -144,7 +153,9 @@
                             <th>Recursive resolver<br>↓<br>authoritative NS</th>
                         </tr>
                         <tr>
-                            <td><button onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The recursive resolver sends a request to the authoritative nameserver. At the end of the lookup chain, this server holds and is the final arbiter of resource records. As the last stop in the process, this server can return the record needed by the web browser.')">?</button></td>
+                            <td><button
+                                    onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The recursive resolver sends a request to the authoritative nameserver. At the end of the lookup chain, this server holds and is the final arbiter of resource records. As the last stop in the process, this server can return the record needed by the web browser.')">?</button>
+                            </td>
                         </tr>
                     </table>
                     <table>
@@ -155,7 +166,9 @@
                             <th>Recursive resolver<br>↑<br>authoritative NS</th>
                         </tr>
                         <tr>
-                            <td><button onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The authoritative nameserver returns the requested data to the recursive resolver.')">?</button></td>
+                            <td><button
+                                    onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The authoritative nameserver returns the requested data to the recursive resolver.')">?</button>
+                            </td>
                         </tr>
                     </table>
                     <table>
@@ -166,7 +179,9 @@
                             <th>Recursive resolver<br>↓<br>web browser</th>
                         </tr>
                         <tr>
-                            <td><button onclick="togglePopup('Recursive resolver <-> web browser', 'The recursive resolver responds to the web browser with the requested data and the user gets their answer.')">?</button></td>
+                            <td><button
+                                    onclick="togglePopup('Recursive resolver <-> web browser', 'The recursive resolver responds to the web browser with the requested data and the user gets their answer.')">?</button>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -176,28 +191,20 @@
         <div class="background-3">
             <div class="container">
                 <h1 class="section-heading">Създаване на DNS сървър</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button class="read-more">Разбери повече</button>
+                <p><strong>BIND</strong> е най-често срещаната програма, използвана за създаване на DNS сървър в Linux.
+                    Тук можеш да научиш как да инсталираш и конфигурираш DNS сървър.</p>
+                <button onclick="location.href='examples.html'" class="read-more">Разбери повече</button>
             </div>
         </div>
         <!-- Section - AWS Route53 -->
         <div class="background-1">
             <div class="container">
                 <h1 class="section-heading">AWS Route53</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button class="read-more">Разбери повече</button>
+                <p><a href="https://aws.amazon.com/route53/" target="_blank">Amazon Route 53</a> е технология която е
+                    часто от услугите на AWS, при която целта е същата като обикновените DNS сървъри, с разликата, че
+                    Route53 може да свързва домейни и към отделни части или други услуги на AWS платформата.</p>
+                <p></p>
+                <button onclick="location.href='route53.html'" class="read-more">Разбери повече</button>
             </div>
         </div>
         <footer class="background-1">
