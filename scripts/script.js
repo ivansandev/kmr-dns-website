@@ -1,6 +1,14 @@
-function togglePopup5() {
+// POPUP
+let popupTitle = document.getElementById("popup-title")
+let popupContent = document.getElementById("popup-content")
+
+function togglePopup(title, content) {
+    popupTitle.innerText = title
+    popupContent.innerText = content
     document.getElementById("popup-1").classList.toggle("active")
 }
+
+// AUTHOR ON HOVER FIELD
 
 let author = document.getElementById("last-wrapper")
 let authorButton = document.getElementById("last")

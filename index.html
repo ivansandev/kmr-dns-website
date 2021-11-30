@@ -67,9 +67,21 @@
         </div>
         <!-- Section - Как работи DNS - steps -->
         <div class="background-1">
-            <h1 style="padding: 18px 0; text-align: center;">Съпки към работата на DNS сървър</h1>
+            <h1 style="padding: 24px 0; text-align: center; font-family: 'Oswald', sans-serif;">Съпки към работа на DNS сървър</h1>
             <hr style="border: 1px solid #66FCF1; opacity: 0.2">
             <div class="container-wide-wrapper">
+
+                <!-- POPOUT -->
+                <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup()">&times;</div>
+                        <h1 id="popup-title">Title</h1>
+                        <p id="popup-content">Content</p>
+                    </div>
+                </div>
+
+                <!-- CONTENT -->
                 <div class="container-wide">
                     <table>
                         <tr>
@@ -78,7 +90,7 @@
                         <tr>
                             <th>example.com<br>↓<br>web browser</th>
                         </tr>
-                        <tr></tr>
+                        <td></td>
                     </table>
                     <table>
                         <tr>
@@ -88,7 +100,7 @@
                             <th>Recursive resolver</th>
                         </tr>
                         <tr>
-                            <td><button>?</button></td>
+                            <td><button onclick="togglePopup('Recursive resolver', 'This is a type of DNS server between a client and authoritative name servers. (An internet service provider (ISP) usually provides a recursive resolver. However, some may opt to use a public DNS resolver.) After receiving a query, a recursive resolver will either respond with cached information or send a request on to a…')">?</button></td>
                         </tr>
                     </table>
                     <table>
@@ -99,7 +111,7 @@
                             <th>Root nameserver</th>
                         </tr>
                         <tr>
-                            <td><button>?</button></td>
+                            <td><button onclick="togglePopup('Root nameserver', 'This is the first step in translating domain names to IP addresses. Its main job is to point to other more specific server locations. It responds to the resolver with the name of a TLD nameserver, which stores the information for its domains.')">?</button></td>
                         </tr>
                     </table>
                     <table>
@@ -110,7 +122,7 @@
                             <th>Recursive resolver<br>↓<br>TLD nameserver</th>
                         </tr>
                         <tr>
-                            <td><button>?</button></td>
+                            <td><button onclick="togglePopup('Recursive resolver', 'The recursive resolver sends a request to the TLD nameserver.')">?</button></td>
                         </tr>
                     </table>
                 </div>
@@ -122,33 +134,17 @@
                         <tr>
                             <th>Recursive resolver<br>↑<br>TLD nameserver</th>
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="popup" id="popup-1">
-                                    <div class="overlay"></div>
-                                    <div class="content">
-                                        <div class="close-btn" onclick="togglePopup()">&times;</div>
-                                        <h1>Title</h1>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit incidunt
-                                            porro,
-                                            magnam tempore animi dignissimos accusantium corrupti harum adipisci,
-                                            laudantium
-                                            mollitia cumque molestias voluptate officiis ad cum quidem fugiat rem.</p>
-                                    </div>
-                                </div>
-                                <button onclick="togglePopup5()">?</button>
-                            </td>
-                        </tr>
+                        <td><button onclick="togglePopup('Recursive resolver <-> TLD nameserver', 'The TLD nameserver responds with the names and possible IP addresses of the requested domain’s authoritative nameservers.')">?</button></td>
                     </table>
                     <table>
                         <tr>
                             <td class="numbering">6</td>
                         </tr>
                         <tr>
-                            <th>Recursive resolver<br>↓<br>authoritative nameserver</th>
+                            <th>Recursive resolver<br>↓<br>authoritative NS</th>
                         </tr>
                         <tr>
-                            <td><button>?</button></td>
+                            <td><button onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The recursive resolver sends a request to the authoritative nameserver. At the end of the lookup chain, this server holds and is the final arbiter of resource records. As the last stop in the process, this server can return the record needed by the web browser.')">?</button></td>
                         </tr>
                     </table>
                     <table>
@@ -156,10 +152,10 @@
                             <td class="numbering">7</td>
                         </tr>
                         <tr>
-                            <th>Recursive resolver<br>↑<br>authoritative nameserver</th>
+                            <th>Recursive resolver<br>↑<br>authoritative NS</th>
                         </tr>
                         <tr>
-                            <td><button>?</button></td>
+                            <td><button onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The authoritative nameserver returns the requested data to the recursive resolver.')">?</button></td>
                         </tr>
                     </table>
                     <table>
@@ -170,7 +166,7 @@
                             <th>Recursive resolver<br>↓<br>web browser</th>
                         </tr>
                         <tr>
-                            <td><button>?</button></td>
+                            <td><button onclick="togglePopup('Recursive resolver <-> web browser', 'The recursive resolver responds to the web browser with the requested data and the user gets their answer.')">?</button></td>
                         </tr>
                     </table>
                 </div>
