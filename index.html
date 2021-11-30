@@ -45,7 +45,7 @@
                     идентифициране на компютъри, услуги и други ресурси, достъпни през интернет или други мрежи с
                     интернет протокол.</p>
                 <p>Системата за имена на домейни (DNS) е отговорна за преобразувенето на имената на домейни в конкретен
-                    IP адрес, удобен за човеко.</p>
+                    IP адрес, удобен за хората.</p>
             </div>
         </div>
     </div>
@@ -101,8 +101,10 @@
                             <th>Recursive resolver</th>
                         </tr>
                         <tr>
-                            <td><button
-                                    onclick="togglePopup('Recursive resolver', 'This is a type of DNS server between a client and authoritative name servers. (An internet service provider (ISP) usually provides a recursive resolver. However, some may opt to use a public DNS resolver.) After receiving a query, a recursive resolver will either respond with cached information or send a request on to a…')">?</button>
+                            <td>
+                                <button
+                                    onclick="togglePopup('Recursive resolver', 'Това се намира между клиент и авторитетните nameserver-и. (Доставчикът на интернет услуги (ISP) обикновено предоставя рекурсивен преобразувател. Някои обаче могат да изберат да използват публичен DNS преобразувател.) След като получи заявка, рекурсивният преобразувател или ще отговори с кеширана информация, или ще изпрати заявка до друг nameserver.')">?</button>
+
                             </td>
                         </tr>
                     </table>
@@ -115,7 +117,7 @@
                         </tr>
                         <tr>
                             <td><button
-                                    onclick="togglePopup('Root nameserver', 'This is the first step in translating domain names to IP addresses. Its main job is to point to other more specific server locations. It responds to the resolver with the name of a TLD nameserver, which stores the information for its domains.')">?</button>
+                                    onclick="togglePopup('Root nameserver', 'Това е първата стъпка в превеждането на имена на домейни в IP адреси. Основната му задача е да сочи към други по-специфични сървъри. Той отговаря на резолвера с името на TLD nameserver, който съхранява информацията за своите домейни.')">?</button>
                             </td>
                         </tr>
                     </table>
@@ -128,7 +130,7 @@
                         </tr>
                         <tr>
                             <td><button
-                                    onclick="togglePopup('Recursive resolver', 'The recursive resolver sends a request to the TLD nameserver.')">?</button>
+                                    onclick="togglePopup('Recursive resolver', 'Рекурсивният преобразувател изпраща заявка до сървъра за имена на TLD.')">?</button>
                             </td>
                         </tr>
                     </table>
@@ -142,7 +144,7 @@
                             <th>Recursive resolver<br>↑<br>TLD nameserver</th>
                         </tr>
                         <td><button
-                                onclick="togglePopup('Recursive resolver <-> TLD nameserver', 'The TLD nameserver responds with the names and possible IP addresses of the requested domain’s authoritative nameservers.')">?</button>
+                                onclick="togglePopup('Recursive resolver <-> TLD nameserver', 'TLD неймсървъра отговаря с имената и възможните IP адреси на авторитетните неймсървъри.')">?</button>
                         </td>
                     </table>
                     <table>
@@ -154,7 +156,7 @@
                         </tr>
                         <tr>
                             <td><button
-                                    onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The recursive resolver sends a request to the authoritative nameserver. At the end of the lookup chain, this server holds and is the final arbiter of resource records. As the last stop in the process, this server can return the record needed by the web browser.')">?</button>
+                                    onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'Рекурсивният разделител изпраща заявка до авторитетния неймсървър. В края на DNS търсенето (lookup), този сървър държи и е последният арбитър на ресурсните записи. Като последна стъпка в процеса, този сървър може да върне записа, необходим на уеб браузъра.')">?</button>
                             </td>
                         </tr>
                     </table>
@@ -167,7 +169,7 @@
                         </tr>
                         <tr>
                             <td><button
-                                    onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'The authoritative nameserver returns the requested data to the recursive resolver.')">?</button>
+                                    onclick="togglePopup('Recursive resolver <-> authoritative nameserver', 'Авторитетният неймсървър връща исканите данни към рекурсивния преобразувател.')">?</button>
                             </td>
                         </tr>
                     </table>
@@ -180,7 +182,7 @@
                         </tr>
                         <tr>
                             <td><button
-                                    onclick="togglePopup('Recursive resolver <-> web browser', 'The recursive resolver responds to the web browser with the requested data and the user gets their answer.')">?</button>
+                                    onclick="togglePopup('Recursive resolver <-> web browser', 'Рекурсивният преобразувател отговаря на уеб браузъра с исканите данни и потребителят получава техния отговор.')">?</button>
                             </td>
                         </tr>
                     </table>
@@ -191,8 +193,8 @@
         <div class="background-3">
             <div class="container">
                 <h1 class="section-heading">Създаване на DNS сървър</h1>
-                <p><strong>BIND</strong> е най-често срещаната програма, използвана за създаване на DNS сървър в Linux.
-                    Тук можеш да научиш как да инсталираш и конфигурираш DNS сървър.</p>
+                <h3 style="font-weight: 400;"><strong>BIND</strong> е най-често срещаната програма, използвана за създаване на DNS сървър в Linux.
+                    Тук можеш да научиш как да инсталираш и конфигурираш DNS сървър.</h3>
                 <button onclick="location.href='examples.html'" class="read-more">Разбери повече</button>
             </div>
         </div>

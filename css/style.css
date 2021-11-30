@@ -20,7 +20,7 @@ body {
 }
 
 footer {
-    padding: 20px 0;
+    padding: 12px 0;
     display: flex;
     justify-content: center;
 }
@@ -47,6 +47,12 @@ footer p {
 
 .background-3 {
     background-color: #D0D2D3;
+    color: #000;
+}
+
+.background-4 {
+    background-color: #45A29E;
+    color: white;
 }
 
 
@@ -105,6 +111,31 @@ footer p {
     opacity: 0;
 }
 
+#author-info {
+    padding: 60px 34px;
+    font-size: 1.2em;
+}
+
+
+#author-info h3{
+    font-size: 1.2em;
+    line-height: 2em;
+    font-weight: 300;
+}
+
+#profile-picture {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+}
+
+#profile-picture img {
+    width: 400px;
+    border-radius: 50%;
+    border: 12px solid #66FCF1;
+    box-shadow: #000 0 0 16px;
+}
+
 
 /* MAIN CONTENT */
 .container {
@@ -140,7 +171,7 @@ footer p {
 }
 
 .dns-image {
-    width: 500px;
+    width: 520px;
     display: flex;
     justify-content: center;
 }
@@ -181,7 +212,7 @@ footer p {
     font-weight: 600;
 }
 
-.background-1 .container a {
+.background-1 .container a, .background-4 .container a {
     color: white;
 }
 
@@ -207,6 +238,7 @@ footer p {
     padding: 8px 12px;
     margin: 4px 0;
     background-color: rgb(14, 14, 14);
+    color: white;
     display: block;
     width: 100%;
     font-size: 16px;
@@ -218,6 +250,9 @@ footer p {
     line-height: 1.5em;
 }
 
+#creating-dns-container>* {
+    margin: 40px 0;
+}
 
 
 .container .read-more {

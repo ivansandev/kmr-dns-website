@@ -36,12 +36,12 @@
     <div class="background-1">
         <div class="container">
             <h1 class="section-heading">Създаване на DNS сървър</h1>
-            <ol>
+            <ol id="creating-dns-container">
                 <li>
                     <h3>Инсталиране на необходимия софтуер</h3>
                     <code>
-                        sudo apt-get update <br>
-                        sudo apt-get install bind9
+                        $ sudo apt-get update <br>
+                        $ sudo apt-get install bind9
                     </code>
                 </li>
 
@@ -50,7 +50,7 @@
                     <p>Добавяме DNS-a на нашият интернет провайдер (ISP) или някой отворен DNS като Google Public DNS
                         (8.8.8.8)</p>
                     <code>
-                    sudo nano /etc/bind/named.conf
+                    $ sudo nano /etc/bind/named.conf
                 </code>
                     <p>Добавете следващите линии в файла</p>
                     <code>
@@ -60,36 +60,81 @@
                     };
                 </code>
                     <p>... и рестартираме DNS сървиса</p>
-                    <code>sudo service bind9 restart</code>
+                    <code>$ sudo service bind9 restart</code>
                 </li>
 
                 <li>
                     <h3>Тестираме кеш nameserver-ът</h3>
                     <p>Може да се използва dig командата за тестиране на DNS сървиси.</p>
-                    <code>dig ubuntu.com</code>
+                    <code>$ dig ubuntu.com</code>
                 </li>
 
                 <li>
                     <h3>Конфигуриране на главен/мастер nameserver</h3>
                     <code>
-                    sudo nano /etc/bind9/named.conf.local
+                    $ sudo nano /etc/bind9/named.conf.local
                 </code>
                     <p>Тук добавете:</p>
                     <code>
-                    zone "tu-sofia.bg" { <br>
+                    zone "thegeekstuff.net" { <br>
                         type master; <br>
-                        file "/etc/bind/db.tu-sofia.bg"; <br>
+                        file "/etc/bind/db.thegeekstuff.net"; <br>
                     }; <br>
                     zone "0.42.10.in-addr.arpa" { <br>
                             type master; <br>
                             notify no; <br>
                             file "/etc/bind/db.10"; <br>
                     };
-                </code>
-                    <p>Сега файла /etc/bind/db.tu-sofia.bg ще ги има детайлите за резолвинг на адресата tu-sofia.bg</p>
+                    </code>
                 </li>
+
+                <li>
+                    <h3>Създаване на пренасочващата разделителна способност за главният/мастер nameserver</h3>
+                    <code>
+                        $ sudo cp /etc/bind/db.local /etc/bind/db.tu-sofia.bg
+                    </code>
+                    <p>Сега направете следащите промяни в /etc/bind/db.tu-sofia.bg...</p>
+                    <ul style="padding-left: 30px">
+                        <li>На реда който има SOA: localhost - Това е FQDN съръвърът, който ще отговаря за
+                            този домейн. Заменете localhost със ns.thegeekstuff.net</li>
+                        <li>В реда, който има NS: localhost. – Това дефинира nameserver-ът (NS).
+                            Трябва да променим това на напълно квалифицираното име на домейн на nameserver-ът.
+                            Променете го на „ns.thegeekstuff.net“.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>Създаване на обратната разделителна способност за главният/мастер nameserver</h3>
+                    <code>
+                        $ sudo cp /etc/bind/db.127 /etc/bind/db.10
+                    </code>
+                    <p>Сега променете /etc/bind/db.10 с същите промяни както и при /etc/bind/db.thegeekstuff.net файла.
+                        След това добавете PTR записите.</p>
+                    <code>
+                        83   IN  PTR ns.thegeekstuff.net. <br>
+                        70   IN  PTR mail.thegeekstuff.net. <br>
+                        80   IN  PTR web.thegeekstuff.net.
+                    </code>
+                    <p>Остава да рестартираме bind9 сървиса.</p>
+                    <code>$ sudo service bind9 restart</code>
+                </li>
+
+                <li>
+                    <h3>Тестиране на DNS сървъра</h3>
+                    <p>На сървърът който го конфигурирате, добавете в /etc/resolv.conf:</p>
+                    <code>nameserver 10.42.0.83</code>
+                    <p>И да се опитаме да ping-нем mail.thegeekstuff.net...</p>
+                    <code>$ ping mail.thegeekstuff.net <br>
+                        PING mail.thegeekstuff.net (10.42.0.70) 56(84) bytes of data. <br>
+                        64 bytes from mail.thegeekstuff.net (10.42.0.70): icmp_req=1 ttl=64 time=0.482 ms <br>
+                        64 bytes from mail.thegeekstuff.net (10.42.0.70): icmp_req=2 ttl=64 time=0.532 ms
+                    </code>
+
+                </li>
+
             </ol>
-            <button onclick="location.href='https://www.thegeekstuff.com/2014/01/install-dns-server/'" class="read-more">Разбери повече</button>
+            <button onclick="location.href='https://ubuntu.com/server/docs/service-domain-name-service-dns'"
+                class="read-more">Разбери повече</button>
         </div>
     </div>
 
@@ -101,4 +146,4 @@
     <script src="scripts/script.js"></script>
 </body>
 
-</h работиt
+</html>
